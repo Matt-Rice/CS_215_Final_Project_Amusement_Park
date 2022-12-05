@@ -49,10 +49,4 @@
 		public String getDefinition(String key) {
 			return dictionary.get(key);
 		}//end getDefinition
-		
-		public static void main(String[]args) throws IOException {
-			HashDictionary firstNames = new HashDictionary();
-			firstNames.fillDictionary("CommonFirstNames.txt");
-			System.out.println(firstNames.getDefinition("30"));
-		}
-}
+}//end HashDictionary.java

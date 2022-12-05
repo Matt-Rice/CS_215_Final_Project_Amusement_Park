@@ -36,12 +36,17 @@ public class Rider {
 		rideCounter = 0;
 		rideChoice = 0;
 	}//end rider
+	/**
+	 * Creates an object of type rider and assigns them a name that the user specifies
+	 * @param names the name that will be given to the rider
+	 */
 	public Rider(String names) {
 		name = names;
 		fastPass = 0;
 		rideCounter = 0;
 		rideChoice = 0;
-	}
+	}//end rider
+	
 	/**
 	 * Returns the name of the Rider
 	 * @return the name of the Rider
@@ -55,7 +60,7 @@ public class Rider {
 	 */
 	public int getFastPass() {
 		return fastPass;
-	}
+	}//end getFastPass
 	/**
 	 * Gets the rideCounter value of the rider
 	 * @return the rideCounter value of the rider

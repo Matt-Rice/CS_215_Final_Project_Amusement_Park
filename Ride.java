@@ -105,8 +105,19 @@ public class Ride {
 	 */
 	public boolean isRideLineFull() {
 		return line.isLineFull();
-	}
+	}//end isRideLineFull
 	
+	/**
+	 * Checks to see if the ride and the ride line are empty
+	 * @return true if both are empty and false if not
+	 */
+	public boolean isLineAndRideEmpty() {
+		if(line.isLineEmpty() && onRide.isLineEmpty())
+			return true;
+		else 
+			return false;
+	}//end isLineAndRideEmpty
+
 	/**
 	 * Removes every rider from the rideLine and the ride
 	 */
@@ -129,4 +140,4 @@ public class Ride {
 		System.out.println("\nCurrently On Ride: " +onRide.lineLength());
 		onRide.printRideLine();
 	}//end printRide
-}//end Ride
+}//end Ride.java

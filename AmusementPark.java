@@ -1,11 +1,11 @@
- import java.util.*;
  import java.io.*;
 
 /**
  * @author Matt Rice
  * @version 11-20-22
- * 
- *
+ * Class that creates an Amusement park object and defines methods to alter an amusement park
+ * AmusementPark.java
+ * Fall 2022
  */
 public class AmusementPark {
 	ResizableArrayBag<Rider> park;
@@ -112,7 +112,7 @@ public class AmusementPark {
 		 Object [] parkArray = park.toArray();
 			for (int index=0;index<parkArray.length;index++) {
 				Rider i=(Rider) parkArray[index];
-				if (i.getRideCounter()>1) {
+				if (i.getRideCounter()>2) {
 					park.remove(i);
 					attendees--;
 				}//end if
@@ -226,6 +226,16 @@ public class AmusementPark {
 			swings.clearRide();
 		}//end clearPark
 		
+		/**
+		 * Returns if everything in the park is empty or not
+		 * @return true if all of the rides, ride lines, and the park are empty and false if they are not
+		 */
+		public boolean isAmusementParkEmpty() {
+			if(ferrisWheel.isLineAndRideEmpty() && rollerCoaster.isLineAndRideEmpty() && dropTower.isLineAndRideEmpty() && swings.isLineAndRideEmpty() && park.isEmpty())
+				return true;
+			else
+				return false;
+		}// end isAmusementParkEmpty
 		/**
 		 * Gets the total number of attendees for the day
 		 * @return the totalAttendees
